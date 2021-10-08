@@ -7,13 +7,13 @@ import java.util.Map;
 public class Kata2 {
 
     public static void main(String[] args) {
-        Integer[] data = {1, 2, 3, 4, 8, 8, 4, 3, 2, 1, 5, 6, 7, 9, 0, 0};
+        String[] data = {"Aashish", "Aashish", "Carlos", "Rosa", "Aashish", "Rosa"};
         
         Histogram histo = new Histogram(data);
-        Map<Integer, Integer> histogram = histo.getHistogram();
+        Map<String, Integer> histogram = histo.getHistogram();
         
         if (!histogram.isEmpty()) {
-            for (Map.Entry<Integer, Integer> entry : histogram.entrySet()) {
+            for (Map.Entry<String, Integer> entry : histogram.entrySet()) {
                 System.out.println("Key -> " + entry.getKey() + ", Value -> " + entry.getValue());
             }
         }
